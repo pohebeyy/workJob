@@ -1,0 +1,200 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainScreen">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/header"
+            android:layout_width="match_parent"
+            android:layout_height="80dp"
+            android:background="#D3D3D3"
+            android:layout_marginTop="10dp"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/textView4"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="Лого"
+                android:layout_marginLeft="50dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"/>
+
+            <!-- Выход -->
+            <TextView
+                android:id="@+id/textView2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="16dp"
+                android:text="выход из аккаунта"
+                android:layout_marginLeft="110dp"
+                android:layout_marginBottom="15dp"
+                android:layout_marginTop="15dp"/>
+        </LinearLayout>
+
+
+        <!-- Информация о подписке -->
+        <LinearLayout
+            android:id="@+id/subscribe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#D3D3D3"
+            android:padding="16dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAccountInfoSubscride"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Информация о подписке/////////////Цена"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/textViewAvailableModels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="26dp"
+                android:text="3D модели доступны"
+                android:visibility="visible" /> <!-- Изначально видимое для одной модели -->
+
+            <Button
+                android:id="@+id/buttonExpandSubscriptionInfo2"
+                android:layout_width="126dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:layout_marginLeft="200dp"
+                android:text="Развернуть" />
+        </LinearLayout>
+
+        <!-- Информация об аккаунте -->
+        <LinearLayout
+            android:id="@+id/accountInfoLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#F6F6F6"
+            android:padding="16dp"
+            android:visibility="gone"
+            android:layout_marginTop="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/textViewAccountInfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textStyle="bold"
+                android:textSize="18sp"
+                android:layout_centerHorizontal="true"
+                android:layout_marginBottom="16dp"/>
+
+            <TextView
+                android:id="@+id/textViewEmail"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Email адрес:"
+                android:textSize="16sp"
+                android:layout_below="@id/textViewAccountInfo"
+                android:layout_centerHorizontal="true"/>
+
+            <TextView
+                android:id="@+id/textViewEmailValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textSize="14sp"
+                android:layout_below="@id/textViewEmail"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="8dp"/>
+
+            <Button
+                android:id="@+id/buttonChangePassword"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Изменить пароль"
+                android:layout_below="@id/textViewEmailValue"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"/>
+
+        </LinearLayout>
+
+        <!-- Купленные 3D модели -->
+        <LinearLayout
+            android:id="@+id/accountInfoLayout3"
+            android:layout_width="390dp"
+            android:layout_height="180dp"
+            android:layout_marginTop="50dp"
+            android:background="#D3D3D3"
+            android:layout_marginLeft="10dp"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:id="@+id/textViewPurchasedModels"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:text="Купленные 3D модели"
+                android:textSize="18sp"
+                android:textStyle="bold" />
+
+            <Button
+                android:id="@+id/buttonPurchasedModel1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Модель 1"
+                android:layout_marginTop="20dp"
+                android:visibility="visible" />
+
+
+            <Button
+                android:id="@+id/buttonPurchasedModel2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="Модель 2"
+                android:visibility="gone" />
+
+        </LinearLayout>
+
+        <!-- Кнопки навигации -->
+        <LinearLayout
+            android:layout_width="370dp"
+            android:layout_height="90dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="40dp">
+
+            <Button
+                android:id="@+id/button_navLK"
+                android:layout_width="130dp"
+                android:layout_marginTop="20dp"
+                android:layout_marginLeft="60dp"
+                android:layout_height="wrap_content"
+                android:text="3D" />
+
+            <Button
+                android:id="@+id/button_nav3D"
+                android:layout_width="130dp"
+                android:layout_height="50dp"
+                android:layout_marginTop="20dp"
+                android:text="ЛК" />
+
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>
