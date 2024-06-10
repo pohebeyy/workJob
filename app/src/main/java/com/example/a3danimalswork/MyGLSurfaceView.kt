@@ -15,7 +15,7 @@ class MyGLSurfaceView : GLSurfaceView {
     private var initialCameraZ = 0f
     private var initialModelX = 0f
     private var initialModelY = 0f
-    private var initialModelZ = 0f // Установите начальное значение Z для модели
+    private var initialModelZ = 2f // Установите начальное значение Z для модели
 
     constructor(context: Context) : super(context) {
         init(context)

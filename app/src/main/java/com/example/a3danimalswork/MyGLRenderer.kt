@@ -23,10 +23,19 @@ class MyGLRenderer(private val context: Context, private val view: GLSurfaceView
     val modelPosition = FloatArray(3) { 0f }
     private val initialModelPosition = floatArrayOf(0f, 0f, 0f)
 
-    override fun onSurfaceCreated(gl: GL10?, config: EGLConfig?) {
-        GLES20.glClearColor(0.0f, 0.0f, 0.0f, 1.0f)
-        model = Model(context, "cat.obj", listOf("texture1.png", "texture2.png", "texture3.png", "Material.002_Normal.png", "texture5.png"))
+    override fun onSurfaceCreated(unused: GL10?, config: EGLConfig?) {
+        GLES20.glClearColor(0.5f, 0.5f, 0.5f, 1.0f)
         GLES20.glEnable(GLES20.GL_DEPTH_TEST)
+
+        val textureFiles = listOf(
+            "texture1.png",
+            "texture2.png",
+            "texture3.png",
+            "texture4.png",
+            "texture5.png"
+        )
+
+        model = Model(context, "cat.obj", textureFiles)
     }
 
 
